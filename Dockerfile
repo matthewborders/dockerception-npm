@@ -5,7 +5,7 @@ RUN apt-get -qq update
 RUN apt-get install -qqy curl bash
 
 # Install extras for this distro
-apt-get install linux-image-extra-$(uname -r)
+RUN apt-get install linux-image-extra-$(uname -r)
 
 # Install Docker prerequisites
 RUN apt-get update -qq && apt-get install -qqy \
