@@ -18,4 +18,4 @@ RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
 	apt-get update && apt-get install -y nodejs && \
 	npm install npm@latest -g
 
-CMD ["service", "docker", "start"]
+ENTRYPOINT service docker start && /bin/bash
